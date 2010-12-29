@@ -1,0 +1,12 @@
+*.bak
+*.diff
+*.patch
+*.swp
+*.swo
+*~
+.DS_Store
+.svn/
+Thumbs.db
+tmp/*.css
+tmp/*.js
+~*
