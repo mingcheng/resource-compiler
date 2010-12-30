@@ -22,10 +22,10 @@
         <div id="page">
             <h1>Simple Resource Compiler</h1>
             <p><em>Simpler Resource Compiler</em> is a Web Application for
-            compile CSS,JavaScript files.</p>
+            compiling CSS,JavaScript files.</p>
 
             <p>It's perfect fit for Web designers and developers 
-            who don't wanna to install anymore software :^) </p>
+            who don't wanna install anymore software :^) </p>
 
             <h2>How to use it?</h2>
 
@@ -39,7 +39,7 @@
 
             <h3>Step 2.</h3>
 
-            <p>Drop CSS,JavaScript file which you wanna minify into new pop-up window.</p>
+            <p>Drop CSS,JavaScript file which you wanna minify into the pop-up window.</p>
 
             <p>That's it, have fun!</p>
 

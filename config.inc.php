@@ -22,6 +22,8 @@ define("DIR_LIBRARY",  DIR_ROOT."/library");
 define("MAX_UPLOAD_FILE_SIZE",  1 * 1024 * 1024); // 1MB
 define("MINIZED_FILE_SUFFIX",   "-min");
 
+define("FLAG_COMPILING_FILE", "/tmp/flag-resource-compiler");
+
 // Java Configure
 define("JAVA_HOME", "/usr/lib/jvm/java-6-sun/");
 define("JAVA_CMD",  "java -Xmx32m -Xms16m -Xmn6m");

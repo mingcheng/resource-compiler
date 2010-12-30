@@ -2,13 +2,17 @@ jQuery(function($) {
     var MessageEl = $("#J_Message");
         MessageEl.hide(), timer = null;
 
+    MessageEl.click(function(e) {
+        this.hide();
+    });
+
     function showMessage(message, timeout) {
         MessageEl.html(message).fadeIn();
         clearTimeout(timer);
         timer = setTimeout(function() {
             MessageEl.fadeOut();
         }, timeout || 1500);
-    }
+    };
             
     var Uploader = new qq.FileUploader({
         debug: false,
@@ -33,7 +37,7 @@ jQuery(function($) {
                     location.href = responseJSON.url;
                 }, 500);
             } else {
-                responseJSON.message && showMessage(responseJSON.message);
+                responseJSON.message && showMessage(responseJSON.message, 5000);
             }
         },
         allowedExtensions: ['js', 'css'],

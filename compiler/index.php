@@ -53,13 +53,24 @@ if (!isset($cmd) || !$cmd) {
 }
 
 try {
+    if (!function_exists("exec")) {
+        throw new Exception("OOPs! Server does NOT support run scripts");
+    }
+
+    if (file_exists(FLAG_COMPILING_FILE)) {
+        throw new Exception("Server is busy, pls try again later.");
+    }
+    @file_put_contents(FLAG_COMPILING_FILE, time());
     $result = exec($cmd, $output, $return_var);
+    @unlink(FLAG_COMPILING_FILE);
 } catch (Exception $e) {
     die_with_message($uploader->getError(), false);
+    exit;
 }
 
 if (!is_readable($minized_file) || !filesize($minized_file)) {
-    die_with_message($cmd, false);
+    //die_with_message($cmd, false);
+    die_with_message("Shit, Server is out of memory.", false);
 }
 
 $result = array (

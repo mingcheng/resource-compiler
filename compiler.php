@@ -28,7 +28,6 @@
             include "./assets/javascript/fileuploader-min.js";
             include "./assets/javascript/compressor-min.js";
         /*
-        <script src="assets/javascript/jquery.min.js"></script>
         <script src="assets/javascript/fileuploader.js"></script>
         <script src="assets/javascript/compressor.js"></script>
         //*/
