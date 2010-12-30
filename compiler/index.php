@@ -39,8 +39,8 @@ $minized_file = DIR_TMP.'/'.$minized_file_name;
 
 switch (strtolower($original_file_pathinfo['extension'])) {
     case 'js':
-        $cmd = sprintf(CLOSURE_COMPILER_CMD, escapeshellarg($uploaded_file), escapeshellarg($minized_file));
-        //$cmd = sprintf(YUI_COMPRESSOR_CMD, escapeshellarg($uploaded_file), escapeshellarg($minized_file));
+        //$cmd = sprintf(CLOSURE_COMPILER_CMD, escapeshellarg($uploaded_file), escapeshellarg($minized_file));
+        $cmd = sprintf(YUI_COMPRESSOR_CMD, escapeshellarg($uploaded_file), escapeshellarg($minized_file));
         break;
 
     case 'css':
@@ -49,7 +49,7 @@ switch (strtolower($original_file_pathinfo['extension'])) {
 }
 
 if (!isset($cmd) || !$cmd) {
-    die_with_message('can not found XXX', false);
+    die_with_message('Can NOT found which compile cmd fit for your file-type.', false);
 }
 
 try {
@@ -59,10 +59,11 @@ try {
 }
 
 if (!is_readable($minized_file) || !filesize($minized_file)) {
-    die_with_message("", false);
+    die_with_message($cmd, false);
 }
 
 $result = array (
+             "file" => $uploader->getName(),
           "success" => true,
     "original_size" => filesize($uploaded_file),
      "minized_size" => filesize($minized_file),
