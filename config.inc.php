@@ -26,7 +26,7 @@ define("FLAG_COMPILING_FILE", "/tmp/flag-resource-compiler");
 
 // Java Configure
 define("JAVA_HOME", "/usr/lib/jvm/java-6-sun/");
-define("JAVA_CMD",  "java -Xmx32m -Xms16m -Xmn6m");
+define("JAVA_CMD",  "java -Xmx32m -Xms8m");
 
 # Google Closure Compiler
 define("CLOSURE_COMPILER_JAR", realpath(DIR_COMPILER . "/closure-compiler.jar"));

@@ -16,6 +16,7 @@ require_once DIR_LIBRARY."/uploader.php";
  */
 function die_with_message($message, $success) {
     header("Content-type: text/javascript");
+    @unlink(FLAG_COMPILING_FILE);
     die(json_encode(array("message" => $message, "success" => !!$success)));
 }
 
