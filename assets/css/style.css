@@ -1,0 +1,58 @@
+/* vim: set et sw=4 ts=4 sts=4 fdm=marker ff=unix fenc=utf8 nobomb: */
+/**
+ * Resource Comilper
+ *
+ * @author mingcheng<i.feelinglucky#gmail.com>
+ * @date   2010-12-30
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+body {
+     width: 315px;
+    height: 315px;
+    overflow: hidden;
+}
+
+#page {
+     width: 315px;
+    height: 315px;
+    background: url(../images/bg.png) no-repeat top left;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.message {
+    width: 100%;
+    min-height: 80px;
+    position: absolute;
+    bottom: 10%;
+    left: 0px;
+    text-align: center;
+    font: 26px 'OFL Sorts Mill Goudy TT', arial, serif;
+    padding: .5em 1em;
+    background: #eaeaea;
+    color: #555;
+    display: none;
+}
+
+.message.loading {
+    top: 0px;
+    height: 100%;
+    padding: 2em 0;
+}
+
+.message.loading em {
+    background: red;
+    font-size: 45px;
+    display: block;
+    color: #333;
+    padding: 1em 0;
+    margin-top: 1em;
+    background: url(../images/loading.gif) no-repeat  top center;
+}

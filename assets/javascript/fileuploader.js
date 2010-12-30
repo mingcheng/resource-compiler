@@ -198,7 +198,8 @@ qq.obj2url = function(obj, temp, prefixDone){
     var uristrings = [],
         prefix = '&',
         add = function(nextObj, i){
-            var nextTemp = temp ? (/\[\]$/.test(temp)) // prevent double-encoding
+            var nextTemp = temp 
+                ? (/\[\]$/.test(temp)) // prevent double-encoding
                    ? temp
                    : temp+'['+i+']'
                 : i;
@@ -501,8 +502,8 @@ qq.FileUploader = function(o){
         listElement: null,
                 
         template: '<div class="qq-uploader">' + 
-                '<div class="qq-upload-drop-area"><span>文件拖到这里上传</span></div>' +
-                '<div class="qq-upload-button">上传文件</div>' +
+                '<div class="qq-upload-drop-area"><span></span></div>' +
+                '<div class="qq-upload-button"></div>' +
                 '<ul class="qq-upload-list"></ul>' + 
              '</div>',
 
@@ -511,8 +512,8 @@ qq.FileUploader = function(o){
                 '<span class="qq-upload-file"></span>' +
                 '<span class="qq-upload-spinner"></span>' +
                 '<span class="qq-upload-size"></span>' +
-                '<a class="qq-upload-cancel" href="#">取消</a>' +
-                '<span class="qq-upload-failed-text">失败</span>' +
+                '<a class="qq-upload-cancel" href="#"></a>' +
+                '<span class="qq-upload-failed-text"></span>' +
             '</li>',        
         
         classes: {
@@ -827,10 +828,10 @@ qq.UploadButton.prototype = {
             top: 0,
             fontFamily: 'Arial',
             // 4 persons reported this, the max values that worked for them were 243, 236, 236, 118
-            fontSize: '118px',
+            fontSize: '10000px',
             margin: 0,
             padding: 0,
-            cursor: 'pointer',
+            cursor: 'default',
             opacity: 0
         });
         
@@ -871,7 +872,7 @@ qq.UploadButton.prototype = {
 qq.UploadHandlerAbstract = function(o){
     this._options = {
         debug: false,
-        action: '',
+        action: '/upload.php',
         fileParam: undefined,
         // maximum number of concurrent uploads        
         maxConnections: 999,

@@ -1,52 +1,47 @@
-<!doctype html> 
-<html> 
-<head> 
-<meta charset="utf-8" /> 
-<link href="assets/css/fileuploader.css" rel="stylesheet" type="text/css">	
-</head>
-<body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta charset="utf-8" /> 
+        <title>Resource Comilper</title>
+        <link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' />
+        <link href="assets/css/index.css" rel="stylesheet" />
+        <title>Simple Resource Compiler</title>
+    </head>
+    <body>
+        <div id="page">
+            <h1>Simple Resource Compiler</h1>
+            <p><em>Simpler Resource Compiler</em> is a Web Application for
+            compile CSS,JavaScript files.</p>
 
-	<div id="file-uploader">		
-		<noscript>			
-			<p>Please enable JavaScript to use file uploader.</p>
-			<!-- or put a simple form for upload here -->
-		</noscript>         
-	</div>
+            <p>It's perfect fit for Web designers and developers 
+            who don't wanna to install anymore software :^) </p>
 
-    <script src="assets/javascript/fileuploader.js"></script>
-    <script>        
-        function createUploader(){            
-            var uploader = new qq.FileUploader({
-                debug: true,
-                //action: 'compiler/do-nothing.htm',
-                action: 'compiler/',
-                element: document.getElementById('file-uploader'),
-                allowedExtensions: ['js', 'css'],
-                sizeLimit: 100 * 10000, // 1MB
-                fileParam: 'upload_file',
-                onComplete: function(id, fileName, responseJSON){
-                    location.href = responseJSON.url;
-                },
-                messages: {
-                    typeError: "抱歉，只允许上传 Javascript、CSS 文件",
-                    sizeError: "{file} 太大了, 文件容量请控制在 {sizeLimit} 之内",
-                   emptyError: "文件 {file} 似乎是空文件"
-                }
-            });           
-        }
-        
-        // in your app create uploader as soon as the DOM is ready
-        // don't wait for the window to load  
-        window.onload = createUploader;     
-    </script>    
-</body>
+            <h2>How to use it?</h2>
+
+
+            <p>Just as the name implies, <em>Simple Resource Compiler</em> is very
+            simple to use! </p>
+
+            <h3>Step 1.</h3>
+
+            <p>Click the below button.</p>
+
+            <button id="J_Open" class="btn-open">Open Compiler</button>
+
+            <p class="thumb"><img src="assets/images/popup-window.png" alt="" /></p>
+
+            <h3>Step 2.</h3>
+
+            <p>Drop CSS,JavaScript file which you wanna minify into new pop-up window.</p>
+
+            <p>That's it, have fun!</p>
+
+            <h2>Contact</h2>
+            <p>Have Problem or Suggest? Send it via mail.</p>
+            <p><img src="assets/images/mail.png" alt="lucky[at]gracecode.com" /></p>
+        </div>
+        <script src="assets/javascript/jquery.min.js"></script>
+        <script src="assets/javascript/index.js"></script>
+    </body>
 </html>
-<?php
-
-/*
-<form action="compiler/" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-    <p><input type="file" name="upload_file" />
-    <input type="submit" value="Upload" /></p>
-</form>
- */
-// vim: set et sw=4 ts=4 sts=4 ft=html fdm=marker ff=unix fenc=utf8 nobomb:
