@@ -8,23 +8,40 @@
  * @link   http://www.gracecode.com/
  */
 
+/**
+ * Charset
+ */
 define("CHAR_SET",     "utf-8");
 
+/**
+ * URL Define
+ */
 define("URL_ROOT",     "http://lab.gracecode.com/resource-compiler/");
 define("URL_DOWNLOAD", URL_ROOT."compiler/get.php?file=%s");
 
+/**
+ * Define Directory
+ */
 define("DIR_ROOT",     dirname(__FILE__));
 define("DIR_ASSETS",   DIR_ROOT."/assets");
 define("DIR_TMP",      DIR_ROOT."/tmp");
 define("DIR_COMPILER", DIR_ROOT."/compiler");
 define("DIR_LIBRARY",  DIR_ROOT."/library");
 
+/**
+ * Upload Configure
+ */
 define("MAX_UPLOAD_FILE_SIZE",  1 * 1024 * 1024); // 1MB
 define("MINIZED_FILE_SUFFIX",   "-min");
 
-define("FLAG_COMPILING_FILE", "/tmp/flag-resource-compiler");
+/**
+ * Compiling flag file
+ */
+define("FLAG_COMPILING_FILE", DIR_TMP."/flag-resource-compiler");
 
-// Java Configure
+/**
+ * Java Configure
+ */
 define("JAVA_HOME", "/usr/lib/jvm/java-6-sun/");
 define("JAVA_CMD",  "java -Xmx32m -Xms8m");
 
