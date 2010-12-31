@@ -1,0 +1,30 @@
+= Online Simple CSS,JavaScript Compiler
+
+Simpler Resource Compiler is a Web Application for compiling CSS,JavaScript files.
+
+It's perfect fit for Web designers and developers who don't wanna install anymore software :^)
+
+== Install
+
+Install this script is very easy.
+
+=== Requirement
+
+* HTTP Server(Apache,Nginx etc.) support runs PHP Scripts
+* Installed Java Development Toolkit(JDK)
+* More than 32mb+ free memory.
+
+=== Install step by step
+
+# Download the archive and unpackage
+# Modify the {{{config.inc.php}}} file
+# Change the DIR_TMP permission to 0777
+# That's it, finish
+
+== Howto use it?
+
+For more infomation, please run and see index.php.
+
+== Contact
+
+Have Problem or Suggest? Mail me at lucky[at]gracecode.com.
