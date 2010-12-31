@@ -44,7 +44,7 @@
             <p>That's it, have fun!</p>
 
             <h2>Contact</h2>
-            <p>Have Problem or Suggest? Send it via mail.</p>
+            <p>Have Problem or Suggest? Mail me at:</p>
             <p><img src="assets/images/mail.png" alt="lucky[at]gracecode.com" /></p>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>

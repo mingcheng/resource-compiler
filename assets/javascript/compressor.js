@@ -3,7 +3,7 @@ jQuery(function($) {
         MessageEl.hide(), timer = null;
 
     MessageEl.click(function(e) {
-        this.hide();
+        $(this).hide();
     });
 
     function showMessage(message, timeout) {
